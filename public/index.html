@@ -7,6 +7,7 @@
   <title>StarKloud</title>
 </head>
 <body>
+  <div id="NavBar"></div>
   <div id="HeroPlayer"></div>
   <div style="display:flex; flex-direction:row; justify-content:center; background-color:white;">
     <div id="commentsSection"></div>
@@ -21,6 +22,10 @@
   <script src="http://localhost:9004/app.js"></script>
   <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
   <script>
+    ReactDOM.render(
+      React.createElement(NavBar),
+      document.getElementById('NavBar')
+    );
     ReactDOM.render(
       React.createElement(HeroPlayer),
       document.getElementById('HeroPlayer')

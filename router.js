@@ -1,4 +1,3 @@
-const express = require('express');
 const router = require('express').Router();
 const FooterController = require('../FooterPlayer/server/controller.js');
 const HeroController = require('../HeroPlayer/server/controller.js');
@@ -18,6 +17,14 @@ router
   .get(CommentsController.fetchAllComments)
   .post(CommentsController.createOneComment)
   .delete(CommentsController.eraseOneComment);
+
+router
+  .route("/replies")
+  .get(CommentsController.fetchAllCommentReplies);
+
+router
+  .route("/users")
+  .get(CommentsController.fetchAllUsers);
 
 router
   .route('/relatedTracks')
